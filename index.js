@@ -25,7 +25,7 @@ app.get("/posts", PostController.getAll);
 app.get("/posts/:id", PostController.getOne);
 app.post("/posts", checkAuth, postCreateValidator, PostController.create);
 app.delete("/posts/:id", checkAuth, PostController.remove);
-// app.patch("/posts", PostController.update);
+app.patch("/posts/:id", PostController.update);
 
 app.listen(8080, (err) => {
     if (err) {
